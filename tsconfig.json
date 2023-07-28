@@ -4,7 +4,7 @@
     "allowJs": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "ES2020",
+    "module": "CommonJS",
     "rootDir": "./src",
     "outDir": "./build",
     "esModuleInterop": true,
