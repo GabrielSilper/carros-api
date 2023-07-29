@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import 'express-async-errors';
 
 class App {
   public app: express.Express;
