@@ -32,7 +32,7 @@ class App {
 
   public async connectDB(uri: string): Promise<void> {
     try {
-      await this.db.connect(uri);
+      await this.db.connect(uri, { authSource: 'admin' });
       console.log(`Good connection with database`);
     } catch (error) {
       console.log(`You have a trouble with the connection: ${error}`);

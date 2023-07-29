@@ -2,10 +2,10 @@ import { Schema, model } from 'mongoose';
 import ICar from '../interfaces/ICar';
 
 const CarSchema = new Schema<ICar>({
-  _id: {
-    type: Number,
-    required: true,
-  },
+  // _id: {
+  //   type: Number,
+  //   required: true,
+  // },
   name: {
     type: String,
     required: true,

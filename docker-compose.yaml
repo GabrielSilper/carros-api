@@ -21,7 +21,7 @@ services:
     environment:
       - DB_USER=root
       - DB_PASSWORD=password
-      - DB_URI=mongodb://mongo:27017/carros_api
+      - DB_URI=mongodb://root:password@mongo:27017/carros_api
       - SERVER_PORT=3001
       - JWT_SECRET=façoUmaQuandoUsarORailway
     volumes:
