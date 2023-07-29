@@ -14,7 +14,7 @@ class CarService implements ICRUDService<ICar> {
       brand: car.brand,
       image: car.image,
     });
-    return { error: false, status: StatusCodes.OK, data: newCar };
+    return { error: false, status: StatusCodes.CREATED, data: newCar };
   }
   async findAll(): Promise<ServiceData<ICar[]>> {
     const cars = await this.carModel.find({});
