@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import 'express-async-errors';
+import carRouter from './routes/car.routes';
 
 class App {
   public app: express.Express;
@@ -22,6 +23,7 @@ class App {
     this.app.get('/live', (req: Request, res: Response) =>
       res.send('App is live...')
     );
+    this.app.use('/cars', carRouter);
   }
 
   public start(PORT: string | number): void {
