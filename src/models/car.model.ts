@@ -3,10 +3,6 @@ import ICar from '../interfaces/ICar';
 
 const CarSchema = new Schema<ICar>(
   {
-    // _id: {
-    //   type: Number,
-    //   required: true,
-    // },
     name: {
       type: String,
       required: true,
@@ -17,6 +13,14 @@ const CarSchema = new Schema<ICar>(
     },
     image: {
       type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+    year: {
+      type: Number,
       required: true,
     },
   },

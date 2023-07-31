@@ -13,6 +13,8 @@ class CarService implements ICRUDService<ICar> {
       name: car.name,
       brand: car.brand,
       image: car.image,
+      type: car.type,
+      year: car.year,
     });
     return { error: false, status: StatusCodes.CREATED, data: newCar };
   }

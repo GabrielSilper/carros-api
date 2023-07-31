@@ -1,6 +1,8 @@
 export default interface ICar {
-  _id?: number;
+  _id: string;
   name: string;
   brand: string;
   image: string;
+  type: string;
+  year: number;
 }
