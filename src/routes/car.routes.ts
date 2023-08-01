@@ -8,6 +8,18 @@ carRouter.get('/', (req: Request, res: Response) =>
   carController.findAll(req, res)
 );
 
+carRouter.get('/brands', (req: Request, res: Response) =>
+  carController.getAllBrands(req, res)
+);
+
+carRouter.get('/types', (req: Request, res: Response) =>
+  carController.getAllTypes(req, res)
+);
+
+carRouter.get('/years', (req: Request, res: Response) =>
+  carController.getAllYears(req, res)
+);
+
 carRouter.get('/:id', (req: Request, res: Response) =>
   carController.findById(req, res)
 );

@@ -15,7 +15,9 @@ Um projeto pessoal pra aplicar meu novos conhecimentos com o banco não relacion
         year: number;
     }`
 - Fazer um CRUD completo;
-- Fazer funções de filtros pra praticar mais as buscas de dados;
+- Pegar os valores únicos de marca, tipo e ano;
+    - vai ajudar o front-end saber quais valores filtrar
+- Fazer uma ou mais funções de filtros;
 
 ### Habilidades que desenvolvi:
 
@@ -24,4 +26,4 @@ _obs.: essa seção vou documentar as habilidades que venho aplicando no projeto
 - Criei um docker-compose com os serviços de Node e MongoDB;
 - Aprendi a conectar o Mongoose com o meu container de MongoDB;
 - Usei algumas funções simples do Mongoose;
--
+- Aprendi a usar o `distinct` para trazer valores únicos;

@@ -63,6 +63,21 @@ class CarService implements ICRUDService<ICar> {
     const data = `Car ${carRemoved.name} with id ${carRemoved.id} was removed!`;
     return { error: false, status: StatusCodes.OK, data };
   }
+
+  async getAllBrands(): Promise<ServiceData<string[]>> {
+    const cars = (await this.carModel.find({}).distinct('brand')) as string[];
+    return { error: false, status: StatusCodes.OK, data: cars };
+  }
+
+  async getAllTypes(): Promise<ServiceData<string[]>> {
+    const cars = (await this.carModel.find({}).distinct('type')) as string[];
+    return { error: false, status: StatusCodes.OK, data: cars };
+  }
+
+  async getAllYears(): Promise<ServiceData<number[]>> {
+    const cars = (await this.carModel.find({}).distinct('year')) as number[];
+    return { error: false, status: StatusCodes.OK, data: cars };
+  }
 }
 
 export default CarService;

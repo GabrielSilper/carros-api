@@ -31,6 +31,21 @@ class CarController {
     const { status, data } = await this.carService.delete(id);
     res.status(status).json(data);
   }
+
+  async getAllBrands(req: Request, res: Response) {
+    const { status, data } = await this.carService.getAllBrands();
+    res.status(status).json(data);
+  }
+
+  async getAllTypes(req: Request, res: Response) {
+    const { status, data } = await this.carService.getAllTypes();
+    res.status(status).json(data);
+  }
+
+  async getAllYears(req: Request, res: Response) {
+    const { status, data } = await this.carService.getAllYears();
+    res.status(status).json(data);
+  }
 }
 
 export default CarController;
