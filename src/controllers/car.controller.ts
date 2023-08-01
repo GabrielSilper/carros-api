@@ -13,6 +13,24 @@ class CarController {
     const { status, data } = await this.carService.findAll();
     res.status(status).json(data);
   }
+
+  async findById(req: Request, res: Response) {
+    const { id } = req.params;
+    const { status, data } = await this.carService.findById(id);
+    res.status(status).json(data);
+  }
+
+  async update(req: Request, res: Response) {
+    const { id } = req.params;
+    const { status, data } = await this.carService.update(id, req.body);
+    res.status(status).json(data);
+  }
+
+  async delete(req: Request, res: Response) {
+    const { id } = req.params;
+    const { status, data } = await this.carService.delete(id);
+    res.status(status).json(data);
+  }
 }
 
 export default CarController;
